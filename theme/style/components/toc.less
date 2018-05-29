@@ -1,0 +1,40 @@
+// main: ../main.less
+
+#navigation {
+	position:fixed;
+	top: 4em;
+	width: 100%;
+	margin: 0;
+	display: block!important;
+	.row {
+		display: block!important;
+	}
+}
+
+#toc {
+	font-size:x-small;
+	a {
+		padding:0.1em 0;
+	}
+
+	li.active > a {
+		font-weight:bold;
+	}
+
+	li > ul {
+		margin-left:1em;
+	}
+	ul > ul {
+		padding-left:1em;
+	}
+
+}
+
+@media (min-width:1199px) {
+	#toc {
+		font-size:small;
+		width:22em;
+		margin-bottom:1em;
+	}
+}
+

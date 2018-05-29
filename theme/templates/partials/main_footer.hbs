@@ -1,0 +1,12 @@
+<footer id="main-footer" class="footer-basic gradient1">
+	{{#global-parameters}}
+	<ul class="list-inline">
+	{{#each navigation-menu }}
+	<li><a href="{{{ url }}}">{{ text }}</a></li>
+	{{/each}}
+	</ul>
+	{{/global-parameters}}
+
+	<p class="copyright">{{{ site.copyright }}}</p>
+</footer>
+

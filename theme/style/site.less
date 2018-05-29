@@ -1,0 +1,242 @@
+// main: main.less
+@import "neo-gothic.less";
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto+Slab:300,700');
+
+body {
+	font-weight:300;
+	font-family: @font-family-serif;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main.main-content {
+	flex: 1;
+	overflow: hidden;
+	width: 100%;
+}
+
+h1, h2, h3 {
+	font-weight:300;
+}
+.display-1 {
+	font-size: 6.2rem;
+}
+.display-2 {
+	font-size: 5rem;
+}
+.display-3 {
+	font-size: 4.25rem;
+}
+.display {
+	font-size: 2.5rem;
+}
+
+.display-1, .display-2, .display-3 {
+	font-weight:700;
+}
+
+section.fullscreen {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+button, .btn {
+	font-family: @font-family-sans-serif;
+	border: none;
+	flex: 1 1 auto;
+	text-transform: uppercase;
+	//transition: 0.5s;
+	//background-size: 200% auto;
+	//box-shadow: 0 0 10px #eee;
+}
+
+input, textarea, select {
+	border: none!important;
+}
+// .btn:hover {
+// 	background-position: 100% center; /* change the direction of the change here */
+// }
+// .btn-primary {
+// 	background-image: linear-gradient(90deg, @brand-primary 0%, lighten(@brand-primary, 10%) 51%, @brand-primary 100%);
+// }
+// .btn-info {
+// 	background-image: linear-gradient(90deg, @brand-info 0%, lighten(@brand-info, 10%) 51%, @brand-info 100%);
+// }
+// .btn-success {
+// 	background-image: linear-gradient(90deg, @brand-success 0%, lighten(@brand-success, 10%) 51%, @brand-success 100%);
+// }
+// .btn-warning {
+// 	background-image: linear-gradient(90deg, @brand-warning 0%, lighten(@brand-warning, 10%) 51%, @brand-warning 100%);
+// }
+// .btn-danger {
+// 	background-image: linear-gradient(90deg, @brand-danger 0%, lighten(@brand-danger, 10%) 51%, @brand-danger 100%);
+// }
+
+.gradient1 {
+	background-image: linear-gradient(45deg, #46899d, #27ded6);
+}
+.gradient2 {
+	background: linear-gradient(45deg, #ffcba7, #18ade2);
+}
+.gradient3 {
+	background:linear-gradient(90deg, #b3caed 30%, #decdca 100%);
+}
+.gradient4 {
+	background:linear-gradient(55deg, #fdefff 30%, #f9d8c0 100%);
+}
+
+
+hr {
+	max-width:120px;
+	border-color:pink;
+}
+
+.col-lg-12.text-center {
+	padding-bottom:1em;
+}
+
+
+.white-bg {
+	background-color:white!important;
+}
+
+.container {
+	padding:2em 15px;
+}
+
+
+body section:first-child {
+	margin-top:2em;
+}
+
+hr.info {
+	border:2px solid #fcfcfc;
+}
+
+.jumbotron .btn-lg {
+	width:100%;
+}
+
+.jumbotron {
+	min-height:40%;
+	min-height:40vh;
+	padding-top:2em;
+	padding-bottom:3em;
+}
+
+@media (min-width:992px) {
+	.row {
+		display:flex;
+		align-items:center;
+	}
+}
+
+.panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading h4 {
+	color:white;
+}
+
+.jumbotron .container {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+section p, .jumbotron p {
+	font-size:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+section {
+	margin-top:0!important;
+	margin-bottom:0!important;
+}
+
+.icon.text-info {
+	margin-top:0.4em;
+}
+
+body > section {
+	overflow:hidden;
+}
+
+.alert {
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+#main-footer {
+	padding:1em;
+}
+
+@media (max-width:991px) {
+	#main-section h1 {
+		font-size:54px;
+	}
+}
+
+@media (max-width:767px) {
+	#main-section h1 {
+		font-size:36px;
+	}
+}
+
+@media (max-width:1199px) {
+	#main-section h1 {
+	  font-size:48px;
+	}
+}
+
+#main-section h1 {
+	color:white;
+	font-size:50px;
+}
+
+@media (max-width:767px) {
+	#fiches-de-cours .btn {
+	  margin:0.3em 0.1em;
+	}
+}
+
+@media (max-width:991px) {
+	#fiches-de-cours .img-responsive {
+	  margin:0;
+	}
+}
+
+#main-section {
+	min-height:50vh;
+}
+
+.katex {
+	font-size:1.1em!important;
+}
+
+blockquote {
+	font-size:1em!important;
+	padding:1em!important;
+	border-left:5px solid @brand-primary;
+	background-color:@gray-lighter;
+	color:initial;
+}
+
+.alert-warning {
+	border:none;
+	border-left:6px solid @brand-warning;
+	color:initial;
+	background-color:@gray-lighter;
+}
+
+.alert-success {
+	border:none;
+	border-left:6px solid @brand-success;
+	color:initial;
+	background-color: @gray-lighter;
+}
+
+.panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading h4 {
+	color:white;
+}
+

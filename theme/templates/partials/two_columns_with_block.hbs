@@ -1,0 +1,23 @@
+<section class="jumbotron two-columns-w-block {{ bg_class }}" {{#if bg_image }}style="background-image:url('{{ bg_image }}');"{{/if }}>
+	<div class="container">
+		<div class="row two-columns">
+			{{#if overlay }}
+			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
+			{{/if }}
+			{{#if (eq block_position 'block_first') }}
+			<div id="{{ block }}" class="col-sm-7 hidden-xs column block">
+				{{{ globals block }}}
+			</div>
+			{{/if }}
+			<div class="col-sm-5 column text">
+				{{{ paragraph }}}
+				{{{ button call_to_action }}}
+			</div>
+			{{#if (eq block_position 'block_last') }}
+			<div id="{{ block }}" class="col-sm-6 col-sm-push-1 hidden-xs column block">
+				{{{ globals block }}}
+			</div>
+			{{/if }}
+		</div>
+	</div>
+</section>

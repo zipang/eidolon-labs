@@ -1,0 +1,33 @@
+// main: ../main.less
+// Une section avec image background fixe ou animée et un overlay couleur
+
+.fixed-bg, .parallax-bg {
+	transform: translateZ(0px);
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+
+	img, .btn {
+		box-shadow:none;
+	}
+	h1, h2, h3, p {
+		color:white;
+		text-align: center;
+	}
+	.one-column-centered {
+		justify-content: center !important;
+	}
+
+	.color-overlay {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		.opacity(0.5);
+	}
+}
+
+
+
+
+

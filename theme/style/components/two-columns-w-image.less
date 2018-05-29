@@ -1,0 +1,45 @@
+// main: ../main.less
+
+.two-columns-w-image, .two-columns-w-block {
+
+	.row {
+		@media (min-width:768px) {
+			display:flex;
+			align-items:center;
+		}
+	}
+
+	.column.text {
+		padding: 0 3em;
+		h2 {
+			.text-center();
+		}
+		p {
+			font-size:20px;
+			margin-bottom:1.5em;
+			.text-justify();
+
+			> a {
+				.btn();
+				.btn-success();
+				.btn-lg();
+				text-transform: uppercase;
+				width: 100%;
+			}
+		}
+	}
+
+	.column.image {
+		@media (min-width:991px) {
+			padding:4em;
+		}
+	}
+
+	&.white-bg, &.grey-bg {
+		.column.image {
+			img {
+				box-shadow:0px 0px 20px 3px rgba(200,200,200,0.5);
+			}
+		}
+	}
+}

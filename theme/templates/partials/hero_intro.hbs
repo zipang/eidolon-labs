@@ -1,0 +1,15 @@
+<section class="fullscreen intro {{ bg_class }}"
+	{{#if bg_image }}style="background-image:url('{{ bg_image }}');"{{/if }}>
+
+	<div class="container" data-aos="fade-up">
+		<div class="row">
+			{{#if overlay }}
+			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
+			{{/if }}
+			<div class="one-column-centered">
+				<h1 class="display-1 entry-title">{{ uppercase title }}</h1>
+				<p class="display entry-summary">{{{ headline }}}</p>
+			</div>
+		</div>
+	</div>
+</section>

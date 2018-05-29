@@ -1,0 +1,80 @@
+// main: ../main.less
+@import "../neo-gothic.less";
+
+#main-header {
+	position: fixed;
+	padding-bottom: 4px;
+	width: 100%; height: 128px;
+	z-index: 100;
+
+	#main-nav {
+	//	position: fixed;
+		// overflow: hidden;
+		position: absolute;
+		width: 100%; height: 100%;
+		padding: 0;
+
+		transition:all 0.5s;
+		background-color: rgba(30, 30, 30, 0);
+
+		font-weight:400;
+		border:none;
+		z-index:1000;
+		border-radius:0!important;
+	}
+	#progression-bar {
+		opacity: 0;
+		transition: all 0.5s;
+		position: absolute;
+		background: orange;
+		left: 0; bottom: 0; margin-bottom: -4px;
+		width: 0; height: 4px;
+	}
+
+	// LOGO SVG
+	img.logo {
+		position: absolute;
+		top: 30px; left: 30px;
+		width: 256px; height: 256px;
+		transition:all 0.5s;
+	}
+	// SITE NAME (HOME LINK)
+	a.navbar-brand {
+		position: absolute;
+		padding: 0;
+		top: 10px;
+		left: -400px; // OUTSIDE VIEWPORT
+		opacity: 0;
+		transition:all 0.5s;
+	}
+	// LIENS MENU FLOTANT
+	.container {
+		padding: 0;
+	}
+
+	// HEADER REPLIE
+	&.collapsed {
+		height: 64px;
+
+		#main-nav {
+			background-color: rgba(30, 30, 30, 0.95);
+		}
+		img.logo {
+			top: 7px; left: 15px;
+			width: 48px; height: 48px;
+		}
+		h2, a {
+			transition:all 0.5s;
+			color:white!important;
+		}
+		a.navbar-brand {
+			left: 120px;
+			opacity: 1;
+		}
+		#progression-bar {
+			opacity: 1;
+		}
+	}
+}
+
+

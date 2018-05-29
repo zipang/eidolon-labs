@@ -1,0 +1,24 @@
+<section class="serie-preview {{ bg_class }}">
+
+	<div class="container">
+
+		<h3>Here we have {{ count parent.relatedPosts}} posts in this serie</h3>
+		<div class="media-container-row">
+			{{#each parent.relatedPosts}}
+			<a href="{{{ link url }}}">
+				<div class="card p-3 col-12 col-md-6 col-lg-4">
+					<div class="card-img pb-3">
+						{{fontawesome-icon}}
+					</div>
+					<div class="card-box">
+						<h4 class="post-title py-3 display-7">{{ title }}</h4>
+						<p class="resume">{{{ headline }}}</p>
+					</div>
+				</div>
+			</a>
+			{{/each}}
+		</div>
+
+	</div>
+
+</section>

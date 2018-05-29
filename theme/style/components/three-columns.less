@@ -1,0 +1,49 @@
+// main: ../main.less
+
+section.three-columns {
+	h2, h3, p {
+		.text-center();
+	}
+
+	// CHAPEAU : col-md-8 col-md-offset-2 col-xs-12
+	.row > .header {
+		.make-xs-column(12);
+		.make-md-column(8);
+		.make-md-column-offset(2);
+		padding: 0 3em;
+
+		p {
+			.center-block();
+		}
+	}
+
+	// COLONNES 1 2 3 : col-xs-12 col-sm-6 col-lg-4
+	.row > .column.text {
+		padding: 0 3em;
+		@media (min-width: @screen-md) {
+			padding: 0 15px;
+		}
+
+		.make-xs-column(12);
+		.make-sm-column(6);
+		.make-md-column(4);
+
+		&:last-child {
+			.make-sm-column(12);
+			.make-md-column(4);
+			&:extend(.clearfix all);
+		}
+
+		a {
+			.btn();
+			.btn-success();
+		}
+	}
+
+
+	i.icon, i.fa {
+		.text-info();
+		margin-top: 0.4em;
+		font-size: 3.4em;
+	}
+}

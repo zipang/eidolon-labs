@@ -1,0 +1,9 @@
+<nav id="breadcrumbs">
+	<ul class="breadcrumb">
+		{{#each parents}}
+		<li><a href="{{ path }}">{{ title }}</a> &gt; </li>
+		{{/each}}
+		<li class="active">{{ title }}</li>
+	</ul>
+</nav>
+

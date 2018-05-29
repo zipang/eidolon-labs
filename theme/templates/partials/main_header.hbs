@@ -1,0 +1,23 @@
+<header id="main-header">
+	<nav class="navbar navbar-default navbar-fixed-top" id="main-nav">
+		<div class="navbar-header">
+			<img class="logo" src="/assets/img/eidolon_labs_robot.png" alt="">
+			<a class="navbar-brand navbar-link" href="/index.html">
+				<img src="/assets/img/eidolon_labs_logo_green.png" alt="{{ site.name }} LOGO">
+			</a>
+			<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+		</div>
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navcol-2">
+				{{#global-parameters}}
+				<ul class="nav navbar-nav navbar-right">
+					{{#each navigation-menu }}
+					<li role="presentation"><a href="{{{ url }}}">{{ text }}</a></li>
+					{{/each}}
+				</ul>
+				{{/global-parameters}}
+			</div>
+		</div>
+	</nav>
+	<div id="progression-bar"></div>
+</header>

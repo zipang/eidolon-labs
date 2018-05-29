@@ -1,0 +1,5 @@
+<a class="btn call-to-action {{ action_type }}" role="button"
+	href="{{ action_link }}" {{#if is_external}}target="_blank"{{/if}}>
+	{{#if action_icon}}{{ fontawesome-icon action_icon }} {{/if}}
+	{{ action_text }}
+</a>

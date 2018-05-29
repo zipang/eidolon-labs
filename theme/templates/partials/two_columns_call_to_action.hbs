@@ -1,0 +1,24 @@
+<section class="two-columns-call-to-action {{ bg_class }}"
+	{{#if bg_image }}style="background-image:url('{{ bg_image }}');"{{/if }}>
+	<div class="container" data-aos="fade-up">
+		<div class="row two-columns">
+			{{#if overlay }}
+			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
+			{{/if }}
+			{{#if (eq columns_order 'action_first') }}
+			<div class="column one-third">
+				{{{ button call_to_action 'primary' action_icon }}}
+			</div>
+			{{/if}}
+			<div class="column two-third">
+				<h3 class="display-3">{{ title }}</h3>
+				<p>{{{ tagline }}}</p>
+			</div>
+			{{#if (eq columns_order 'action_last') }}
+			<div class="column one-third">
+				{{{ button call_to_action 'primary' action_icon }}}
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</section>
