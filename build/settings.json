@@ -1,0 +1,29 @@
+{
+	"buildDir": "public",
+	"site": {
+		"name": "EIDOLON LABS",
+		"baseUrl": "https://blog.eidolon-land.space",
+		"lang": "fr",
+		"description": "Un blog technique sur les dernières technologies web et mobile.",
+		"tags": "JAMstack, node.js, flutter, static site generator, metalsmith",
+		"copyright": "(2018) Eidolon Labs",
+		"google-analytics": true,
+		"markdown-scan": ["paragraph"]
+	},
+	"env": {
+		"dev": {
+			"site": {
+				"name": "EIDOLON LABS (DEV)",
+				"baseUrl": "http://eidolon-labs.test",
+				"google-analytics": false
+			}
+		},
+		"preprod": {
+			"site": {
+				"name": "EIDOLON LABS (BETA)",
+				"baseUrl": "https://preprod.netlify.com",
+				"google-analytics": false
+			}
+		}
+	}
+}
