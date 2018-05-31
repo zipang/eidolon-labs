@@ -42,7 +42,7 @@ module.exports = function plugin(options) {
 					// copy this content inside the global namespace !
 					globals[slug] = file;
 
-					console.info(`Adding ${slug} ${Object.keys(file)} to globals`);
+					console.info(`Adding ${slug} data : ${Object.keys(file)} to globals`);
 					delete files[path];
 					return;
 				}
@@ -52,8 +52,6 @@ module.exports = function plugin(options) {
 
 				if (collection && file.parent) {
 					// Tell it to the parent file
-					console.log(`Found collection '${file.collection}' of ${collection.length} item on ${slug}. Parent page is ${file.parent.title}`);
-					console.log(JSON.stringify(collection.map((obj)=>obj.path)));
 					file.parent.relatedPosts = collection;
 					file.parent.collection_title = file.collection;
 				}
