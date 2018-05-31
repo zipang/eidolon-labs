@@ -83,7 +83,7 @@ $(function onPageLoad() {
 		}
 	}
 
-	$("article.main-content").inView(function(visible) {
+	$("article .main-content").inView(function(visible) {
 		var $elt = this;
 		if (visible) {
 			$elt._hnd = $w.on("resize scroll", animateProgression($elt));
