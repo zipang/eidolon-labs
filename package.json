@@ -11,7 +11,6 @@
 		"@fortawesome/fontawesome": "^1.1.8",
 		"@fortawesome/fontawesome-free-solid": "^5.0.13",
 		"cheerio": "^1.0.0-rc.2",
-		"copyfiles": "^2.0.0",
 		"handlebars": "3.0.3",
 		"just-handlebars-helpers": "^1.0.13",
 		"markdown-bundle": "^0.1.7",
@@ -22,13 +21,16 @@
 		"metalsmith-sitemap": "^1.2.0",
 		"netlify-cms": "^1.8.4",
 		"netlify-cms-widget-color": "^2.2.0",
+		"node-less-chokidar": "^0.1.2",
 		"node-watch": "^0.5.8",
 		"sync-files": "^1.0.3",
 		"yaml-front-matter": "^4.0.0"
 	},
 	"scripts": {
-		"sync": "sync-files theme/assets public/assets && sync-files theme/admin public/admin && copyfiles theme/*.* public/",
-		"build": "build/build.js && yarn run sync",
+		"clean": "rm -Rf public",
+		"build-css": "node-less-chokidar theme/style/main.less public/assets/css/main.css",
+		"sync-assets": "sync-files theme/assets public/assets && sync-files theme/admin public/admin && cp theme/*.* public/",
+		"build": "yarn run clean && build/build.js && yarn run sync-assets && yarn run build-css",
 		"watch": "sync-files --watch theme/assets public/assets && sync-files --watch theme/admin public/admin && sync-files --watch theme/config.yml public/config.yml"
 	}
 }
