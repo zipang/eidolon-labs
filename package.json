@@ -28,7 +28,7 @@
 	},
 	"scripts": {
 		"sync": "sync-files theme/assets public/assets && sync-files theme/admin public/admin && copyfiles theme/*.* public/",
-		"build": "build/build.js && sync",
+		"build": "build/build.js && yarn run sync",
 		"watch": "sync-files --watch theme/assets public/assets && sync-files --watch theme/admin public/admin && sync-files --watch theme/config.yml public/config.yml"
 	}
 }
