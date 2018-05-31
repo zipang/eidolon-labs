@@ -8,7 +8,7 @@ sections:
     headline: "Un blog qui regarde les étoiles et parle de serveurs transparents"
     bg_class: parallax-bg
     bg_image: /assets/img/look_at_the_sky.jpg
-    photograph: Mark Basarab
+    photograph: Photo by Teddy Kelley on Unsplash
     overlay: rgb(177, 163, 116)
   - type: one_column_section
     bg_class: white
