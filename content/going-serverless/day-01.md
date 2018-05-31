@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Going Serverless -Day #1"
+title: "Going Serverless - Day #1"
 headline: "Adieu Wordpress : à la rencontre des CMS Markdown."
 icon: pencil-alt
 bg_class: parallax-bg
@@ -10,9 +10,10 @@ sections:
   - type: one_column_section
     bg_class: white
     paragraph: Lors de cette première journée, nous rédigeons nos contenus en markdown.
-  - type: quote
+  - type: quote_section
     bg_class: info
-    quote: Si les dinosaures n'étaient pas morts, il aurait falu les tuer !
+    quote: Si les dinosaures n'étaient pas déjà morts, il aurait fallu les tuer ! - Chuck Norris
+
 ---
 # La révolution Serverless
 

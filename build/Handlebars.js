@@ -1,20 +1,20 @@
 const Handlebars = require("handlebars"),
 	H            = require("just-handlebars-helpers"),
 	fontawesome  = require('@fortawesome/fontawesome'),
-	solid        = require('@fortawesome/fontawesome-free-solid').default,
-	moment       = require("moment");
+	solid        = require('@fortawesome/fontawesome-free-solid').default;
 
-// Adds all the icons from the Solid style into our library for easy lookup
-fontawesome.library.add(solid)
+// Register a whole set of helpful Handlebar helpers
+H.registerHelpers(Handlebars);
 
-Handlebars.registerHelper('fontawesome-css', function () {
-	return new Handlebars.SafeString(
-		fontawesome.dom.css()
-	)
-})
+// Add all fontawesome solid style icons into our library for easy lookup
+fontawesome.library.add(solid);
 
 var notFound = fontawesome.icon({ prefix: 'fas', iconName: "question" });
 
+/**
+ * Render a fontawesome icon as inline SVG !
+ * @see https://fontawesome.com/how-to-use/server-side-rendering
+ */
 Handlebars.registerHelper('fontawesome-icon', function (iconName) {
 	var icon = fontawesome.icon({ prefix: 'fas', iconName: iconName });
 	return new Handlebars.SafeString(
@@ -22,12 +22,7 @@ Handlebars.registerHelper('fontawesome-icon', function (iconName) {
 	)
 })
 
-// Register some Handlebar helpers
-H.registerHelpers(Handlebars);
 
-Handlebars.registerHelper("date", function (date) {
-	return moment(date, "YYYY-MM-DD").format("D MMM YYYY");
-});
 
 Handlebars.registerHelper("filename", function (path) {
 	return path.split("/").pop();
@@ -74,6 +69,31 @@ Handlebars.registerHelper("button", function(action, action_type, action_icon) {
 		action_icon: action_icon || '',
 		is_external: true
 	});
+});
+
+/**
+ * Render a quote block
+ *   {{ blockquote 'Let it be ! - John Lennon' }}
+ * @param {String} fullQuote 'quote - author'
+ */
+Handlebars.registerHelper("blockquote", function(fullQuote) {
+
+	if (!fullQuote) return "";
+
+	var parts = fullQuote.split("-"),
+		quote = parts[0].trim(),
+		author = parts[1] ? parts[1].trim() : "";
+
+	// Lazily load the partial
+	var partial = Handlebars.partials["blockquote"];
+	if (typeof partial !== 'function') {
+		partial = Handlebars.compile(partial);
+	}
+
+	return new Handlebars.SafeString(partial({
+		quote: quote,
+		author: author
+	}));
 });
 
 /**

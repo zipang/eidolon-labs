@@ -10,10 +10,10 @@ sections:
   - type: one_column_section
     bg_class: white
     paragraph: Au cours de cette deuxième journée, nous générons du HTML avec Metalsmith, un générateur de site statique phare basé sur node.JS.
-  - type: quote
+  - type: quote_section
     bg_class: info
-    quote: Si les dinosaures n'étaient pas morts, il aurait falu les tuer !
-    author: J.C Van Damme
+    quote: Si les dinosaures n'étaient pas morts, il aurait fallu les tuer ! - J.C Van Damme
+    paragraph: Mais comme tout le monde le sait (du moins les spectateurs de Jurassic World) les dinosaures, c'est pas si facile à tuer !
 ---
 # La révolution Serverless
 

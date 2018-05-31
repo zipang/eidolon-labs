@@ -83,3 +83,10 @@ sync(
 	{ watch: true },
 	(event, data) => console.log(`${event}: ${JSON.stringify(data)}`)
 );
+
+sync(
+	path.join(assetsDir, "config.yml"),
+	path.join(outputDir, "config.yml"),
+	{ watch: true },
+	(event, data) => console.log(`${event}: ${JSON.stringify(data)}`)
+);

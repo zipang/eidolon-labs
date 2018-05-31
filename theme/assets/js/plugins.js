@@ -4,6 +4,9 @@
 
 	var $w = $(w); // we'll use it often
 
+	// Start at the page beginning !
+	w.scrollTop = 0;
+
 	$.noop = function () {};
 
 	// Avoid `console` errors in browsers that lack a console.
@@ -188,10 +191,5 @@
 	// 	});
 
 
-	// // GA
-	// w.dataLayer = w.dataLayer || [];
-	// function gtag(){dataLayer.push(arguments);}
-	// gtag('js', new Date());
-	// gtag('config', 'UA-722815-1');
 
 })(window, jQuery); // redefine window, jQuery and undefined as local variables

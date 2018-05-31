@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: zipang/eidolon-labs
+# These lines should *not* be indented
+publish_mode: editorial_workflow
+media_folder: "assets/img/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "page" # Used in routes, e.g., /admin/collections/blog
+    label: "Page" # Used in the UI
+    folder: "content/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "select", options: ["page", "article"], default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Background Image", name: "bg_image", widget: "image"}
+      - label: "Sections"
+        name: "sections"
+        widget: "object"
+        fields:
+          - label: "Hero Intro"
+            name: "hero_intro"
+            widget: "object"
+            fields:
+              - {name: "type", widget: "hidden", default: "hero_intro"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Headline", name: "headline", widget: "text"}
+              - {label: "Background", name: "bg_class", widget: "select", required: true, default: "parallax_bg", options: [{label: "Background image (parallax)", value: "parallax-bg"}, {label: "Background image (fixed)", value: "fixed-bg"}, {label: "Background image (fixed)", value: "fixed-bg"}, {label: "White background", value: "white_bg"}, {label: "Gradient 1", value: "gradient1"}, {label: "Gradient 2", value: "gradient2"}]}
+              - {label: "Image background", name: "bg_image", widget: "image"}
+              - {label: "Overlay color (as rgba)", name: "overlay", widget: "string"}
+          - label: "Text (one column)"
+            name: "one_column_section"
+            widget: "object"
+            fields:
+              - {name: "type", widget: "hidden", default: "one_column_section"}
+              - {label: "Background", name: "bg_class", widget: "hidden", default: "white_bg"}
+              - {label: "Paragraphe", name: "paragraph", widget: "markdown"}
+          - label: "Quote"
+            name: "quote_section"
+            widget: "object"
+            fields:
+              - {name: "type", widget: "hidden", default: "quote_section"}
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Paragraphe", name: "paragraph", widget: "markdown"}
+
+

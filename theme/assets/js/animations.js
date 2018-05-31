@@ -74,8 +74,6 @@ $(function onPageLoad() {
 				coefProgression = 100 * (cH - rect.bottom + wH) / cH;
 			}
 
-			console.log(`Reading progression : ${coefProgression}%`)
-
 			$progressionBar.width(`${coefProgression}%`).toggleClass("hidden", coefProgression === 0);
 		}
 

@@ -11,7 +11,7 @@ sections:
     overlay: rgb(177, 163, 116)
   - type: serie_preview
     serie: going-serverless
-    bg_class: info
+    bg_class: bg-info
     bg_image: 
     overlay: 
   - type: two_columns_call_to_action
