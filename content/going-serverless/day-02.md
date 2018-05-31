@@ -5,7 +5,7 @@ headline: "Adieu Wordpress : nous déployons des sites statiques !"
 icon: pencil-alt
 bg_class: parallax-bg
 bg_image: /assets/img/take_the_road.jpg
-overlay: rgb(177, 163, 116)
+overlay: rgb(100, 77, 0)
 sections:
   - type: one_column_section
     bg_class: white
