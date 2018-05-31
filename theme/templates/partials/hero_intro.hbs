@@ -6,10 +6,11 @@
 			{{#if overlay }}
 			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
 			{{/if }}
-			<div class="one-column-centered">
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<h1 class="display-1 entry-title">{{ uppercase title }}</h1>
 				<p class="display entry-summary">{{{ headline }}}</p>
 			</div>
 		</div>
 	</div>
+	{{#if photograph}}{{> unsplash_badge }}{{/if}}
 </section>
