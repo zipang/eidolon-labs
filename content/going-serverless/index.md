@@ -12,8 +12,8 @@ sections:
   - type: serie_preview
     serie: going-serverless
     bg_class: bg-info
-    bg_image: 
-    overlay: 
+    bg_image:
+    overlay:
   - type: two_columns_call_to_action
     bg_class: gradient2
     title: Vous désirez déployer votre propre site statique ?
@@ -24,14 +24,4 @@ sections:
     bg_image:
     overlay:
 ---
-# La révolution Serverless
-
-## Punchlines
-
-Commençons par le commencement : si lors d’un de ces cocktails pizza-bières post-meetup, un entrepreneur vous explique qu’il a opté pour une architecture serverless, choisissez votre réponses parmis les options suivantes : 
-
-
-- T’es devenu un citoyen lambda
-- Moi aussi, je suis pasché chez Sophie.. la chaussette..
-- 
 
