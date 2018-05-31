@@ -52,7 +52,7 @@ $(function onPageLoad() {
 		}
 	});
 
-	var $progressionBar = $("#progression-bar");
+	var $progressionBar = $("#progression-bar").width(0);
 
 	/**
 	 * Move the progression bar indicating the % of the article content that has been viewed
@@ -83,7 +83,7 @@ $(function onPageLoad() {
 		}
 	}
 
-	$(".main-content").inView(function(visible) {
+	$("article.main-content").inView(function(visible) {
 		var $elt = this;
 		if (visible) {
 			$elt._hnd = $w.on("resize scroll", animateProgression($elt));
