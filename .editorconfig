@@ -7,6 +7,12 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.md, *.yml, *.yaml]
+[*.md]
+indent_style = space
+trim_trailing_whitespace = false
+[*.yml]
+indent_style = space
+trim_trailing_whitespace = false
+[*.yaml]
 indent_style = space
 trim_trailing_whitespace = false
