@@ -1,6 +1,17 @@
 // main: ../main.less
+@import "../neo-gothic";
 
 article {
+
+	// Several sections may succeed themself in the main content,
+	// so the top and bottom padding is reported on this wrapper instead of each containers
+	.main-content {
+		padding: 3em 0;
+	}
+	.container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 
 	table {
 		border-spacing:0;
@@ -13,8 +24,33 @@ article {
 		box-shadow:none;
 	}
 
-	.main-content {
-		min-height: 100vh;
+	.one-column-centered {
+		.make-xs-column(12);
+		.make-md-column(9);
+		.make-md-column-offset(2);
+	}
+
+	p {
+		text-align: justify;
+	}
+
+
+	section.quote {
+		blockquote {
+			margin: 0 0 0 5em;
+			width: 100%;
+			&::before {
+				position: absolute;
+				display: block;
+				color: @brand-primary;
+				content: "\201C";
+				font-family: @font-family-monospace;
+				font-size: 20rem;
+				margin-left: -0.7em;
+				margin-top: 0.5em;
+				line-height: 0;
+			}
+		}
 	}
 }
 

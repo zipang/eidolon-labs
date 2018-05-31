@@ -1,5 +1,5 @@
 // main: main.less
-@import "neo-gothic.less";
+@import "neo-gothic";
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto+Slab:300,700');
 
 body {
@@ -82,7 +82,7 @@ input, textarea, select {
 	background: linear-gradient(45deg, #ffcba7, #18ade2);
 }
 .gradient3 {
-	background:linear-gradient(90deg, #b3caed 30%, #decdca 100%);
+	background:linear-gradient(90deg, #b3caed 30%, #444242 100%);
 }
 .gradient4 {
 	background:linear-gradient(55deg, #fdefff 30%, #f9d8c0 100%);
@@ -91,7 +91,7 @@ input, textarea, select {
 
 hr {
 	max-width:120px;
-	border-color:pink;
+	border-color:orange;
 }
 
 .col-lg-12.text-center {
@@ -107,11 +107,6 @@ hr {
 	padding:2em 15px;
 }
 
-
-body section:first-child {
-	margin-top:2em;
-}
-
 hr.info {
 	border:2px solid #fcfcfc;
 }
@@ -125,6 +120,17 @@ hr.info {
 	min-height:40vh;
 	padding-top:2em;
 	padding-bottom:3em;
+
+	.container {
+		padding-top:0;
+		padding-bottom:0;
+	}
+
+	p {
+		font-size: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media (min-width:992px) {
@@ -134,25 +140,11 @@ hr.info {
 	}
 }
 
-.panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading h4 {
-	color:white;
-}
 
-.jumbotron .container {
-	padding-top:0;
-	padding-bottom:0;
-}
-
-section p, .jumbotron p {
-	font-size:20px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-section {
-	margin-top:0!important;
-	margin-bottom:0!important;
-}
+// section {
+// 	margin-top:0!important;
+// 	margin-bottom:0!important;
+// }
 
 .icon.text-info {
 	margin-top:0.4em;
@@ -171,44 +163,6 @@ body > section {
 	padding:1em;
 }
 
-@media (max-width:991px) {
-	#main-section h1 {
-		font-size:54px;
-	}
-}
-
-@media (max-width:767px) {
-	#main-section h1 {
-		font-size:36px;
-	}
-}
-
-@media (max-width:1199px) {
-	#main-section h1 {
-	  font-size:48px;
-	}
-}
-
-#main-section h1 {
-	color:white;
-	font-size:50px;
-}
-
-@media (max-width:767px) {
-	#fiches-de-cours .btn {
-	  margin:0.3em 0.1em;
-	}
-}
-
-@media (max-width:991px) {
-	#fiches-de-cours .img-responsive {
-	  margin:0;
-	}
-}
-
-#main-section {
-	min-height:50vh;
-}
 
 .katex {
 	font-size:1.1em!important;

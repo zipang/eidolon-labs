@@ -1,0 +1,20 @@
+<section class="jumbotron follow-up {{ bg_class }}" {{#if bg_image }}style="background-image:url('{{ bg_image }}');"{{/if }}>
+	<div class="container">
+		<div class="row two-columns">
+			{{#if overlay }}
+			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
+			{{/if }}
+			<div class="col-sm-5 column text">
+				{{{ paragraph }}}
+				{{{ button call_to_action }}}
+			</div>
+			{{#if (eq image_position 'image_last') }}
+			<div class="col-sm-6 col-sm-push-1 hidden-xs column image">
+				<img class="img-responsive aos-init aos-animate" src="{{ image }}"
+					data-aos="slide-left" data-aos-duration="600"
+					data-aos-offset="300" data-aos-delay="300">
+			</div>
+			{{/if }}
+		</div>
+	</div>
+</section>
