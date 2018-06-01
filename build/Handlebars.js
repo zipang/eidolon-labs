@@ -96,6 +96,33 @@ Handlebars.registerHelper("blockquote", function(fullQuote) {
 	}));
 });
 
+
+/**
+ * Render the unplash photographer's credit link
+ *   {{ unsplash_credits photographer }}
+ * @param {String} photographer 'John Doe (@unsplash_id)'
+ */
+Handlebars.registerHelper("unsplash_credits", function(photographer_credits) {
+
+	if (!photographer_credits) return "";
+
+	var name = photographer_credits.split("(")[0].trim(),
+		unsplash_id = /(@\w+)/g.test(photographer_credits)
+			? /(@\w+)/g.exec(photographer_credits)[0]
+			: "";
+
+	// Lazily load the partial
+	var partial = Handlebars.partials["unsplash_badge"];
+	if (typeof partial !== 'function') {
+		partial = Handlebars.compile(partial);
+	}
+
+	return partial({
+		photographer: name,
+		unsplash_id: unsplash_id
+	});
+});
+
 /**
  * Render any section with its dedicated partial
  *   {{#sections}}{{/sections}}
