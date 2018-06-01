@@ -31,7 +31,7 @@
 		"clean": "rm -Rf public",
 		"build-css": "node-less-chokidar theme/style/main.less public/assets/css/main.css && rm theme/style/main.css*",
 		"sync-assets": "sync-files theme/assets public/assets && sync-files theme/admin public/admin && cp theme/*.* public/",
-		"build": "yarn run clean && build/build.js && yarn run sync-assets && yarn run build-css",
+		"build": "yarn run clean && build/build.js && yarn run sync-assets && yarn run build-css && ls -l public/assets/css",
 		"watch": "sync-files --watch theme/assets public/assets && sync-files --watch theme/admin public/admin && sync-files --watch theme/config.yml public/config.yml"
 	}
 }
