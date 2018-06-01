@@ -1,7 +1,7 @@
 <section class="fullscreen intro {{ bg_class }}"
 	{{#if bg_image }}style="background-image:url('{{ bg_image }}');"{{/if }}>
 
-	<div class="container" data-aos="fade-up">
+	<div class="container" data-aos="fade-up" data-aos-delay="1000">
 		<div class="row">
 			{{#if overlay }}
 			<div class="color-overlay" style="background-color:{{ overlay }};"></div>
@@ -12,5 +12,5 @@
 			</div>
 		</div>
 	</div>
-	{{#if photograph}}{{> unsplash_badge }}{{/if}}
+	{{#if photographer}}{{> unsplash_badge }}{{/if}}
 </section>
