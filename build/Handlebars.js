@@ -104,7 +104,10 @@ Handlebars.registerHelper("blockquote", function(fullQuote) {
  */
 Handlebars.registerHelper("unsplash_credits", function(photographer_credits) {
 
-	if (!photographer_credits) return "";
+	if (!photographer_credits) {
+		console.log("No photographer credits found")
+		return "";
+	}
 
 	var name = photographer_credits.split("(")[0].trim(),
 		unsplash_id = /(@\w+)/g.test(photographer_credits)

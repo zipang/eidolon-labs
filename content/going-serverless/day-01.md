@@ -5,7 +5,7 @@ headline: "Adieu Wordpress : à la rencontre des CMS Markdown."
 icon: pencil-alt
 bg_class: parallax-bg
 bg_image: /assets/img/take_the_road.jpg
-photographer: https://unsplash.com/@dinoreichmuth
+photographer: "Dino Reichmuth (@dinoreichmuth)"
 overlay: rgb(100, 77, 0)
 sections:
   - type: one_column_section
