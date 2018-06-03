@@ -136,8 +136,15 @@ Handlebars.registerHelper("sections", function(name) {
 	var output = "", parentContext = this; // We can't access parent conetxt inside partials !!!
 
 	this.sections.forEach(function(section) {
-		// Lazily load the partial
+
+		// Load the partial associated with this section
 		var partial = Handlebars.partials[section.type];
+
+		if (!partial) {
+			console.warn("No template found for section " + section.type);
+			return;
+		}
+
 		if (typeof partial !== 'function') {
 			partial = Handlebars.compile(partial);
 		}
