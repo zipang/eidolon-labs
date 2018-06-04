@@ -100,7 +100,7 @@ Handlebars.registerHelper("blockquote", function(fullQuote) {
 /**
  * Render the unplash photographer's credit link
  *   {{ unsplash_credits photographer }}
- * @param {String} photographer 'John Doe (@unsplash_id)'
+ * @param {String} photographer Ex : 'John Doe (@unsplash_id)'
  */
 Handlebars.registerHelper("unsplash_credits", function(photographer_credits) {
 
