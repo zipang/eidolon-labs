@@ -2,7 +2,7 @@
 	"buildDir": "public",
 	"site": {
 		"name": "EIDOLON LABS",
-		"baseUrl": "https://blog.eidolon-land.space",
+		"baseUrl": "https://eidolon-labs-blog.netlify.com",
 		"lang": "fr",
 		"description": "Un blog technique sur les dernières technologies web et mobile.",
 		"tags": "JAMstack, node.js, flutter, static site generator, metalsmith",
@@ -21,7 +21,7 @@
 		"preprod": {
 			"site": {
 				"name": "EIDOLON LABS (BETA)",
-				"baseUrl": "https://preprod.netlify.com",
+				"baseUrl": "https://eidolon-labs-blog.netlify.com",
 				"google-analytics": false
 			}
 		}
