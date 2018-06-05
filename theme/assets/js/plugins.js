@@ -4,9 +4,6 @@
 
 	var $w = $(w); // we'll use it often
 
-	// Start at the page beginning !
-	w.scrollTop = 0;
-
 	$.noop = function () {};
 
 	// Avoid `console` errors in browsers that lack a console.
@@ -55,17 +52,18 @@
 	};
 
 	/**
-	 * Scroll to $target position (speed : 1000px/s or ms)
+	 * Scroll to target element position (speed : 1000px/s or ms)
+	 * @param {DOMElement} element to scroll to
 	 */
-	$.scrollTo = function($target, ms) {
-		var dest   = $target.offset(),
-			offset = Number($target.data("scrollOffset")) || -w.innerHeight/4;
+	$.scrollTo = function(target, ms, offset) {
+		var $target  = $(target),
+			distance = $target.offset().top - w.scrollY,
+			offset   = offset || -w.innerHeight/4; // default offset : position element at 1/4 from viewport top
 
-		if (dest) $target.velocity({
-			scrollTop: offset
-		}, {
-			duration: ms || 500,
-			ease: "ease-in-out"
+		$target.velocity("scroll", {
+			duration: ms || distance,
+			ease: "ease-in-out",
+			offset: offset
 		});
 	}
 
