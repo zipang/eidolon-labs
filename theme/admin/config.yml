@@ -3,8 +3,39 @@ backend:
   repo: zipang/eidolon-labs
 # These lines should *not* be indented
 publish_mode: editorial_workflow
-media_folder: "assets/img/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/assets/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "/media_upload" # Where uploaded media files will be stored in the repo
+public_folder: "/medias" # Final destination after build <img src="/medias/..">
+slug:
+  encoding: "ascii"
+  clean_accents: true
+fieldsets:
+  - name: "link"
+    label: "Link"
+    fields:
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Text", name: "text", widget: "string"}
+  - name: "button"
+    label: "Button"
+    fields:
+      - {include: "link"}
+      - {label: "Type", name: "type", widget: "select", options: ["primary", "info", "success"]}
+  - name: "section_background"
+    label: "Section Background"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Background style", name: "bg_class", widget: "select", required: true, default: "white", options: [{label: "Background image (parallax)", value: "parallax-bg"}, {label: "Background image (fixed)", value: "fixed-bg"}, {label: "Grey background", value: "grey"}, {label: "White background", value: "white"}, {label: "Gradient 1", value: "gradient1"}, {label: "Gradient 2", value: "gradient2"}]}
+      - {label: "Background Image", name: "bg_image", widget: "image"}
+      - {label: "Photographer", name: "photographer", widget: "string"}
+      - {label: "Overlay color", name: "overlay", widget: "color"}
+  - name: "hero_section"
+    label: "Hero section"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Headline", name: "headline", widget: "text"}
+      - {include: "section_background"}
+  - name: "call_to_action_section"
+    label: "Call to action section"
+    fields:
+      - {include: ["hero_section", "button"]}
 collections:
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
@@ -16,6 +47,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Background Image", name: "bg_image", widget: "image"}
+      - {label: "Photographer", name: "photographer", widget: "string"}
       - label: "Sections"
         name: "sections"
         widget: "object"
