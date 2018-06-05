@@ -7,7 +7,7 @@ sections:
     title: EIDOLON LABS
     headline: "Un blog qui regarde les étoiles et qui parle de serveurs transparents"
     bg_class: parallax-bg
-    bg_image: /assets/img/look_at_the_sky.jpg
+    bg_image: /medias/look_at_the_sky.jpg
     photographer: "Teddy Kelley : @teddykelley"
     overlay: rgb(87, 82, 0)
   - type: one_column_section

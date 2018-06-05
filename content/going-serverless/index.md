@@ -7,7 +7,7 @@ sections:
     title: Going Serverless
     headline: "Dans cette première série de tutoriaux, nous allons voir comment déployer un mini-site personnel (blog + pages statiques) sur Netlify, et le bonus : c'est gratuit et il n'y aura aucun serveur à configurer !"
     bg_class: parallax-bg
-    bg_image: /assets/img/take_the_road.jpg
+    bg_image: /medias/take_the_road.jpg
     photographer: Dino Reichmuth (@dinoreichmuth)
     overlay: rgb(100, 77, 0)
   - type: serie_preview

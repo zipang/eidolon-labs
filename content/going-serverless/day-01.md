@@ -4,7 +4,7 @@ title: "Going Serverless - Day #1"
 headline: "Adieu Wordpress : à la rencontre des CMS Markdown."
 icon: pencil-alt
 bg_class: parallax-bg
-bg_image: /assets/img/take_the_road.jpg
+bg_image: /medias/take_the_road.jpg
 photographer: "Dino Reichmuth (@dinoreichmuth)"
 overlay: rgb(100, 77, 0)
 sections:
@@ -16,7 +16,7 @@ sections:
     quote: Si les dinosaures n'étaient pas déjà morts, il aurait fallu les tuer ! - Chuck Norris
   - type: two_columns_with_image
     image_position: image_first
-    image: /assets/img/twisted.jpg
+    image: /medias/twisted.jpg
     paragraph: Cette première étape semble un peu éloignée de notre objectif final. Quel rapport peut-il exister entre markdown et le déploiement sur une plateforme serverless. Il faut revenir un peu en arrière pour comprendre ce point.
 
 ---

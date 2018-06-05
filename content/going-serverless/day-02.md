@@ -4,7 +4,7 @@ title: "Going Serverless - Day #2"
 headline: "Adieu Wordpress : nous déployons des sites statiques !"
 icon: pencil-alt
 bg_class: parallax-bg
-bg_image: /assets/img/take_the_road.jpg
+bg_image: /medias/take_the_road.jpg
 overlay: rgb(100, 77, 0)
 sections:
   - type: one_column_section
