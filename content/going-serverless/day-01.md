@@ -16,7 +16,7 @@ sections:
     quote: Si les dinosaures n'étaient pas déjà morts, il aurait fallu les tuer ! - Chuck Norris
   - type: two_columns_with_image
     image_position: image_first
-    image: /medias/twisted.jpg
+    image: /medias/a_twisted_turn.jpg
     paragraph: Cette première étape semble un peu éloignée de notre objectif final. Quel rapport peut-il exister entre markdown et le déploiement sur une plateforme serverless. Il faut revenir un peu en arrière pour comprendre ce point.
 
 ---
