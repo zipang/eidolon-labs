@@ -1,14 +1,23 @@
 // main: ../main.less
 @import "../neo-gothic";
 
-article {
+article, main {
 
 	// Several sections may succeed themself in the main content,
 	// so the top and bottom padding is reported on this wrapper instead of each containers
-	.main-content {
+	.main-content, &.main-content {
 		padding: 3em 0;
 		p {
 			text-align: justify;
+		}
+		a {
+			font-family: @font-family-serif;
+			border-bottom: 3px solid #b4e7f8;
+			transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+			&:hover {
+				background-color: #b4e7f8;
+				text-decoration: none;
+			}
 		}
 	}
 	.container {
