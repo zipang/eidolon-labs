@@ -53,11 +53,13 @@
 
 	/**
 	 * Scroll to target element position (speed : 1000px/s or ms)
-	 * @param {DOMElement} element to scroll to
+	 * @param {DOMElement} target element to scroll to
+	 * @param {Number} ms number of millisecond to reach the target
+	 * @param {Number} offset number of pixels from top of screen to position the scrolled element
 	 */
 	$.scrollTo = function(target, ms, offset) {
 		var $target  = $(target),
-			distance = $target.offset().top - w.scrollY,
+			distance = $target.offset().top - $w.scrollTop(),
 			offset   = offset || -w.innerHeight/4; // default offset : position element at 1/4 from viewport top
 
 		$target.velocity("scroll", {
@@ -132,62 +134,5 @@
 
 		return $elts;
 	}
-
-
-	// $('#contact-form').bootstrapValidator({
-	// 	// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-	// 	feedbackIcons: {
-	// 		valid: 'fa fa-check',
-	// 		invalid: 'fa fa-remove',
-	// 		validating: 'fa fa-refresh'
-	// 	},
-	// 	fields: {
-	// 		name: {
-	// 			validators: {
-	// 				notEmpty: {
-	// 					message: 'Indiquez votre nom'
-	// 				}
-	// 			}
-	// 		},
-
-	// 		email: {
-	// 			validators: {
-	// 				notEmpty: {
-	// 					message: 'Saisissez une adresse mail'
-	// 				},
-	// 				emailAddress: {
-	// 					message: 'Vérifiez votre adresse mail'
-	// 				}
-	// 			}
-	// 		},
-
-	// 		message: {
-	// 			validators: {
-	// 				notEmpty: {
-	// 					message: 'Veuillez saisir un message'
-	// 				}
-	// 			}
-	// 		}
-	// 	}})
-	// 	.on('success.form.bv', function(evt) {
-	// 		$('#success-message').slideDown({ opacity: "show" }, "slow") // Do something ...
-	// 		$('#contact-form').data('bootstrapValidator').resetForm();
-
-	// 		// Prevent form submission
-	// 		evt.preventDefault();
-
-	// 		// Get the form instance
-	// 		var $form = $(evt.target);
-
-	// 		// Get the BootstrapValidator instance
-	// 		var bv = $form.data('bootstrapValidator');
-
-	// 		// Use Ajax to submit form data
-	// 		$.post($form.attr('action'), $form.serialize(), function(result) {
-	// 			console.log(result);
-	// 		}, 'json');
-	// 	});
-
-
 
 })(window, jQuery); // redefine window, jQuery and undefined as local variables
