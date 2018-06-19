@@ -1,0 +1,65 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: ''
+- name: resume
+  label: Resume
+  type: text
+  hidden: false
+  default: ''
+- name: sections
+  label: Sections
+  type: field_group_list
+  fields:
+  - name: type
+    label: Type
+    type: text
+    hidden: false
+    default: ''
+  - name: title
+    label: Title
+    type: text
+    hidden: false
+    default: ''
+  - name: headline
+    label: Headline
+    type: textarea
+    hidden: false
+    default: ''
+  - name: bg_class
+    label: Bg class
+    type: text
+    hidden: false
+    default: ''
+  - name: bg_image
+    label: Bg image
+    type: text
+    hidden: false
+    default: ''
+  - name: photographer
+    label: Photographer
+    type: text
+    hidden: false
+    default: ''
+  - name: overlay
+    label: Overlay
+    type: text
+    hidden: false
+    default: ''
+  - name: paragraph
+    label: Paragraph
+    type: textarea
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
