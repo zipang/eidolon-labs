@@ -1,0 +1,44 @@
+---
+hide_body: true
+is_partial: true
+fields:
+- type: text
+  default: hero_intro
+  hidden: true
+  name: name
+  description: Tells us what this section is
+- type: text
+  name: title
+  label: Title
+  description: An H1 title for the page displayed inside an hero intro
+  config:
+    required: true
+- type: text
+  name: headline
+  label: Headline
+  description: More information on the content of this page as displayed in the hero
+    section
+- type: select
+  name: background
+  config:
+    source:
+      type: simple
+    options:
+    - parallax-bg
+    - fixed-bg
+    - white
+    - gradient1
+    - gradient2
+  label: Background
+  description: What kind of background should we display inside this hero intro ?
+- type: file
+  name: bg_image
+  label: Image Background
+  description: Upload the image file (jpg, png) that should be displayed as the fixed
+    or parallax background of this section
+- type: color
+  name: overlay
+  config:
+    color_format: Hex
+  label: Overlay color
+  description: Should we add an overlay foreground on top of the image ?
