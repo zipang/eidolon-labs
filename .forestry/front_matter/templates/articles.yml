@@ -7,63 +7,22 @@ fields:
   type: text
   hidden: false
   default: ''
-- type: select
+- type: text
   name: layout
-  config:
-    source:
-      type: simple
-    options:
-    - article
-    - page
   label: Layout
+  default: article
+  hidden: true
 - name: resume
   label: Resume
   type: text
   hidden: false
   default: ''
-- name: sections
+- type: blocks
+  name: sections
   label: Sections
-  type: field_group_list
-  fields:
-  - name: type
-    label: Type
-    type: text
-    hidden: false
-    default: ''
-  - name: title
-    label: Title
-    type: text
-    hidden: false
-    default: ''
-  - name: headline
-    label: Headline
-    type: textarea
-    hidden: false
-    default: ''
-  - name: bg_class
-    label: Bg class
-    type: text
-    hidden: false
-    default: ''
-  - name: bg_image
-    label: Bg image
-    type: text
-    hidden: false
-    default: ''
-  - name: photographer
-    label: Photographer
-    type: text
-    hidden: false
-    default: ''
-  - name: overlay
-    label: Overlay
-    type: text
-    hidden: false
-    default: ''
-  - name: paragraph
-    label: Paragraph
-    type: textarea
-    hidden: false
-    default: ''
-  hidden: false
-  default: ''
+  description: Add any sections you need to build your page or article
+  template_types:
+  - two-columns-text-image
+  - quote
+  - one-column-paragraph
+  - hero-intro
