@@ -26,3 +26,5 @@ fields:
   - quote
   - one-column-paragraph
   - hero-intro
+pages:
+- content/going-serverless/day-3.md
