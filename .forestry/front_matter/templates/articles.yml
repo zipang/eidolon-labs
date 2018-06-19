@@ -7,11 +7,15 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: layout
+- type: select
+  name: layout
+  config:
+    source:
+      type: simple
+    options:
+    - article
+    - page
   label: Layout
-  type: text
-  hidden: false
-  default: ''
 - name: resume
   label: Resume
   type: text
