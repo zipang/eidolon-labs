@@ -1,0 +1,28 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  default: one_column_section
+  name: name
+  label: Name
+  hidden: true
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - white
+    - grey
+  label: Background
+  name: bg_class
+  default: white
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: true
+  label: Paragraph
+  name: paragraph
+  description: A rich text section
