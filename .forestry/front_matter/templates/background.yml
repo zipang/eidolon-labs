@@ -1,0 +1,31 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: select
+  name: bg_class
+  config:
+    source:
+      type: simple
+    options:
+    - parallax-bg
+    - fixed-bg
+    - white
+    - grey
+    - gradient1
+    - gradient2
+  label: Background
+  description: What type of background should we display for this section ?
+  default: white
+- type: file
+  name: bg_image
+  label: Image background
+  description: Choose an image to apply for the parallax or fixed image backgrounds
+- type: color
+  name: overlay
+  config:
+    color_format: Hex
+  label: Overlay color
+  description: Should we cover the background image with a semi-transparent overlay
+    ?
+  default: 
