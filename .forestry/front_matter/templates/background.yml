@@ -21,6 +21,11 @@ fields:
   name: bg_image
   label: Image background
   description: Choose an image to apply for the parallax or fixed image backgrounds
+- type: text
+  name: photographer
+  label: Photographer
+  description: If you add an image from Unsplash, add the photographer credits here
+    as 'John doe (@johndoe)'
 - type: color
   name: overlay
   config:
