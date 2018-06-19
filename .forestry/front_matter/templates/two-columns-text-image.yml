@@ -1,0 +1,42 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: name
+  label: Name
+  default: two_columns_with_image
+  hidden: true
+- type: select
+  name: background
+  config:
+    source:
+      type: simple
+    options:
+    - white
+    - grey
+  label: Background
+  default: white
+- type: file
+  name: image
+  label: Image
+  description: Image (jpg or png only)
+- type: textarea
+  name: paragraph
+  label: Paragraph
+  description: A nice text regarding an image
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: true
+- type: select
+  name: image_position
+  config:
+    source:
+      type: simple
+    options:
+    - image_first
+    - image_last
+  label: Image position
+  default: image_first
