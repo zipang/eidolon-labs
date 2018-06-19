@@ -1,0 +1,24 @@
+---
+hide_body: true
+is_partial: true
+fields:
+- type: text
+  default: quote_section
+  label: Name
+  name: name
+  hidden: true
+- type: file
+  name: image
+  label: Image
+- type: textarea
+  name: quote
+  label: Quote
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: true
+  default: |-
+    > There is nothing permanent except change.
+    >
+    > - Heraclitus
