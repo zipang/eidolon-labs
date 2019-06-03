@@ -9,8 +9,8 @@ function notEmpty(str) {
 }
 
 /**
- * Metalsmith plugin that adds `parents` and `parent` property to each files,
- * to easily generate navigation links like breadcrumbs.
+ * Vavawoo plugin that adds `parents` and `parent` property to each files,
+ * to easily generate hierarchical navigation links (breadcrumbs..)
  *
  * @return {Function}
  */
@@ -22,9 +22,9 @@ function plugin(opts) {
 			paths = {};
 
 		// First loop to determine absolute paths of files
-		Object.keys(files).forEach(function(key) {
-			var file = files[key],
-				absolutePath = "/" + key.replace(/\.[0-9a-z]+$/i, '').replace("/index", ''); // clean path from extension and add leading '/'
+		files.map(file => {
+			// clean path from extension and add leading '/'
+			var absolutePath = "/" + key.replace(/\.[0-9a-z]+$/i, '').replace("/index", '');
 
 			file.path = absolutePath;
 			file.url = baseUrl + absolutePath;
