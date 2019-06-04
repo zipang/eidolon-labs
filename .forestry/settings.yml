@@ -5,15 +5,15 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/going-serverless
-  label: Going serverless
-  create: all
-  match: "**/*"
-- type: directory
   path: content
   label: Pages
   create: all
   match: "*"
+- type: directory
+  path: content/going-serverless
+  label: Going serverless
+  create: all
+  match: "**/*"
 upload_dir: media_upload
 public_path: "/medias"
 front_matter_path: ''
@@ -30,4 +30,6 @@ build:
   - HUGO_VERSION=0.38.1
   preview_output_directory: public
   output_directory: public
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
 version: 0.38.1

@@ -1,7 +1,6 @@
 ---
 label: hero-intro
 hide_body: true
-is_partial: true
 fields:
 - type: text
   default: hero_intro

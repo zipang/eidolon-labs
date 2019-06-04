@@ -1,7 +1,6 @@
 ---
 label: one-column-paragraph
 hide_body: false
-is_partial: true
 fields:
 - type: text
   default: one_column_section

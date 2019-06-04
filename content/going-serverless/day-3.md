@@ -9,7 +9,8 @@ bg_image = "/medias/poser_les_fondations.jpg"
 headline = "Commit..... Publish !"
 name = "hero_intro"
 overlay = "#F8E71C"
+photographer = ""
 template = "hero-intro"
-title = "Forestry.io : un CMS headless"
+title = "Introducing the git-based CMS (Forestry)"
 
 +++
