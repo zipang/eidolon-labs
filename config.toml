@@ -1,0 +1,2 @@
+## Possible options "yaml", "toml" or "json"
+metaDataFormat = "yaml"

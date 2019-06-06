@@ -10,30 +10,28 @@
 	"dependencies": {
 		"@fortawesome/fontawesome": "^1.1.8",
 		"@fortawesome/fontawesome-free-solid": "^5.0.13",
-		"cheerio": "^1.0.0-rc.2",
+		"cheerio": "^1.0.0-rc.3",
+		"configstore": "^4.0.0",
 		"cssnano": "^4.1.4",
+		"graceful-fs": "^4.1.15",
 		"handlebars": "^4.0.12",
+		"js-yaml": "^3.13.1",
 		"just-handlebars-helpers": "^1.0.14",
 		"less": "^3.8.1",
 		"less-plugin-clean-css": "^1.5.1",
 		"markdown-bundle": "^0.2.0",
-		"netlify-cms": "^2.1.2",
-		"netlify-cms-widget-color": "^3.0.1",
-		"node-watch": "^0.5.8",
+		"node-watch": "^0.6.2",
 		"postcss-cli": "^6.0.0",
-		"sync-files": "^1.0.3",
 		"vavawoo": "^0.7.1",
 		"yaml-front-matter": "^4.0.0",
-		"yargs": "^12.0.2"
+		"yargs": "^13.2.4"
 	},
 	"scripts": {
 		"clean": "rm -Rf public",
 		"build-css": "lessc --clean-css theme/style/main.less > public/assets/css/main.css",
-		"sync-assets": "sync-files theme/assets public/assets && sync-files theme/admin public/admin && sync-files media_upload public/medias && cp theme/*.* public/",
-		"build": "yarn run clean && build/build.js && yarn run sync-assets && yarn run build-css && ls -l public/assets/css",
+		"build": "yarn run clean && build/build.js && yarn run build-css && ls -l public/assets/css",
 		"minify": "minify:css && minify:js",
 		"minify:css": "postcss public/assets/css/main.css > public/assets/css/styles.min.css",
-		"minify:js": "cat public/assets/js/plugins.js public/assets/js/animations.js public/assets/js/forms.js",
-		"watch": "sync-files --watch theme/assets public/assets && sync-files --watch theme/admin public/admin && sync-files --watch theme/config.yml public/config.yml"
+		"minify:js": "cat public/assets/js/plugins.js public/assets/js/animations.js public/assets/js/forms.js"
 	}
 }
