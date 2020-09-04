@@ -21,7 +21,7 @@
 		"less-plugin-clean-css": "^1.5.1",
 		"markdown-bundle": "^0.2.0",
 		"node-watch": "^0.6.2",
-		"postcss-cli": "^6.0.0",
+		"postcss-cli": "^7.1.1",
 		"vavawoo": "^0.7.1",
 		"yaml-front-matter": "^4.0.0",
 		"yargs": "^13.2.4"
