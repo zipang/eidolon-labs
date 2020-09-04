@@ -16,8 +16,7 @@ sections:
     levait jamais la tête vers les étoiles ? Il est temps de réaliser que les promesses
     du cloud et des architectures serverless sont déjà tenues. Pour s'en convaincre,
     démarrer notre série ['Going serverless'](/going-serverless) qui va examiner semaine
-    après semaine les différents composants de cette révolution sans serveurs. Hé
-    oui, revenez quand vous voulez.
+    après semaine les différents composants de cette révolution sans serveurs. 
 - type: two_columns_call_to_action
   bg_class: gradient2
   title: Vous désirez déployer votre propre site statique ?

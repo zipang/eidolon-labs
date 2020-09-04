@@ -22,7 +22,4 @@ sections:
 Commençons par le commencement : si lors d’un de ces cocktails pizza-bières post-meetup, un entrepreneur vous explique qu’il a opté pour une architecture serverless, choisissez votre réponses parmis les options suivantes : 
 
 
-- T’es devenu un citoyen lambda
-- Moi aussi, je suis pasché chez Sophie.. la chaussette..
-- 
-
+- T’es devenu un citoyen lambda ?
