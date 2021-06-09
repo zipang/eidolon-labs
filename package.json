@@ -14,7 +14,7 @@
 		"configstore": "^4.0.0",
 		"cssnano": "^4.1.4",
 		"graceful-fs": "^4.1.15",
-		"handlebars": "^4.3.0",
+		"handlebars": "^4.7.7",
 		"js-yaml": "^3.13.1",
 		"just-handlebars-helpers": "^1.0.14",
 		"less": "^3.8.1",
